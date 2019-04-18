@@ -18,6 +18,8 @@ for_window [title="stfloat"] floating enable
 for_window [title="htopfloat"] floating enable
 gaps inner 5
 gaps outer 5
+smart_gaps on
+smart_borders on
 
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
@@ -45,7 +47,7 @@ for_window [instance="dropdown_*"] move position center
 exec --no-startup-id lockr
 #-e -f -c 1d2021
 # mpd startup
-exec --no-startup-id mpd
+#exec --no-startup-id mpd
 # Setting the background:
 exec --no-startup-id setbg
 # Starts dunst for notifications:
