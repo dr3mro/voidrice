@@ -71,6 +71,7 @@ map E :!$EDITOR %f<CR>
 map mkd :mkdir<space>
 map bg :!setbg %f &<CR>
 map X :!ext %f &<CR>
+map dS :!subdl %f 2>/dev/null &<CR>
 nnoremap s :shell<cr>
 nnoremap w :view<cr>
 vnoremap w :view<cr>gv
