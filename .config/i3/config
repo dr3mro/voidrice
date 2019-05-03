@@ -16,6 +16,8 @@ for_window [title="^nmtui$"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [title="stfloat"] floating enable
 for_window [title="htopfloat"] floating enable
+for_window [title="gotopfloat"] floating enable
+
 gaps inner 5
 gaps outer 5
 smart_gaps on
@@ -174,7 +176,9 @@ bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 #bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 
-bindsym $mod+i 			exec $term -T "htopfloat" -e htop
+bindsym $mod+Ctrl+i 			exec $term -T "htopfloat" -e htop
+bindsym $mod+i 			exec $term -T "gotopfloat" -e gotop
+
 bindsym $mod+Shift+i		exec --no-startup-id i3resize up
 
 bindsym $mod+o			sticky toggle
