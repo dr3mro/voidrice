@@ -99,3 +99,5 @@ fontselectar
 larbs.sh
 project2HDMI
 wallpapers/
+.local/lib/
+.local/state/
