@@ -98,7 +98,7 @@ client.background $black
 
 bar {
 	#font pango: SFNS Display:style=Regular 10
-	font pango:UbuntuMono Nerd Font 10
+	font pango:UbuntuMono Nerd Font 11
 	colors {
 			background $darkblack
 			statusline $darkwhite
