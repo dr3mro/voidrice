@@ -28,11 +28,8 @@ alias ka="killall" \
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 
-<<<<<<< HEAD
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
 
-=======
->>>>>>> 1f68edef08094fd9d060d812bf45fe17d5ed4a31
 vf() { fzf | xargs -r -I % $EDITOR % ;}
