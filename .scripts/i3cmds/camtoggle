@@ -1,2 +1,0 @@
-#!/bin/sh
-pkill -f /dev/video || mpv --no-config --video-sync=desync --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=15%  --title="mpvfloat"mpv  /dev/video0

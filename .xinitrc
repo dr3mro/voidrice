@@ -1,4 +1,4 @@
 #!/bin/sh
 $HOME/.monicarc   #monitor calibration
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[ -f "$HOME/.xprofile" ] && . ~/.xprofile
 exec i3

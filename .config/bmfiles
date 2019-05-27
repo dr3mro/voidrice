@@ -15,3 +15,7 @@ cfmb	~/.config/ncmpcpp/bindings
 cfmc	~/.config/ncmpcpp/config
 er	~/Documents/referbib
 cfB	~/.config/i3blocks/config
+<<<<<<< HEAD:.config/bmfiles
+=======
+cfk	~/.config/sxhkd/sxhkdrc
+>>>>>>> 1f68edef08094fd9d060d812bf45fe17d5ed4a31:.config/bmfiles

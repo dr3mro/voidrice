@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+" vim: filetype=vifm
+>>>>>>> 1f68edef08094fd9d060d812bf45fe17d5ed4a31
 source ~/.config/vifm/vifmshortcuts
 
 set vicmd=$EDITOR

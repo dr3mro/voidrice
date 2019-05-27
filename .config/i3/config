@@ -25,16 +25,10 @@ smart_borders on
 
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
-set $stoprec --no-startup-id dmenurecord kill
-set $shutdown sudo -A shutdown -h now
-set $reboot sudo -A reboot
-set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
-set $hibernate sudo -A systemctl suspend
 
 floating_modifier $mod
 workspace_auto_back_and_forth yes
 popup_during_fullscreen smart
-
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
@@ -152,6 +146,7 @@ bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-
 bindsym $mod+Shift+Home		exec --no-startup-id showclip
 bindsym $mod+Shift+End		exec --no-startup-id xcqr
 
+
 # #---Letter Key Bindings---# #
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
@@ -165,7 +160,6 @@ bindsym $mod+Shift+e		exec --no-startup-id tutorialvids
 
 bindsym $mod+r 			exec $term -e $FILE
 bindsym $mod+Ctrl+r		exec --no-startup-id winresize
-bindsym $mod+Shift+r		exec thunar
 
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
@@ -184,16 +178,11 @@ bindsym $mod+Shift+i		exec --no-startup-id i3resize up
 bindsym $mod+o			sticky toggle
 bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 
-bindsym $mod+p			exec --no-startup-id lmc toggle
-bindsym $mod+Shift+p		exec --no-startup-id lmc pause
-
 bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
-bindsym $mod+Shift+a		exec $term -e pulsemixer
 
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s		gaps inner current minus 5
 
-bindsym $mod+d			exec --no-startup-id dmenu_run
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Ctrl+d		exec --no-startup-id "rofi -show drun"
 
@@ -205,7 +194,6 @@ bindsym $mod+f			fullscreen toggle
 bindsym $mod+Shift+f		mode "$freeze" ;; exec --no-startup-id notify-send "Distraction-free mode activated." "Press Super+Shift+f to return."
 
 bindsym $mod+g			workspace prev
-bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
@@ -224,12 +212,13 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 
 bindsym $mod+x			exec --no-startup-id clipmenu -i -fn Ubuntu:size=10 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
 
-bindsym $mod+c			exec --no-startup-id cabl
 bindsym $mod+Shift+c		exec --no-startup-id camtoggle
 
-bindsym $mod+v			exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
 bindsym $mod+Shift+v		exec --no-startup-id mflux
 
+bindsym $mod+c			exec --no-startup-id cabl
+
+bindsym $mod+v			exec --no-startup-id $term -e $EDITOR -c "VimwikiIndex"
 
 bindsym $mod+b			bar mode toggle
 bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id hover left

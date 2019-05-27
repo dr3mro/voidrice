@@ -8,8 +8,3 @@ image/png=img.desktop;
 image/jpeg=img.desktop;
 image/gif=img.desktop;
 application/rss+xml=rss.desktop
-inode/directory=/home/dr3mro/.local/share/applications/ranger.desktop
-
-[Added Associations]
-text/plain=text.desktop;
-audio/mpeg=mpv.desktop;
